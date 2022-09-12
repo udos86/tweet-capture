@@ -39,7 +39,7 @@ export class YtController {
     // Real Streaming
     response.setHeader('Content-Type', type);
     response.setHeader('Content-Disposition', disposition);
-
+    //return new StreamableFile(this.ytService.convertVideo(params.id, format), {disposition, type});
     this.ytService.convertVideo(params.id, format).pipe(response);
   }
 }
